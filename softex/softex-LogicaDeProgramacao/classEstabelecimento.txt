@@ -1,0 +1,49 @@
+public class Estabelecimento {
+    String nome_estabelecimento;
+    String tipo_estabelecimento;
+    int qtdFuncionarios;
+    int qtdPedidosDoDIA;
+    
+ 
+    public Estabelecimento(String nome_estabelecimento, 
+            String tipo_estabelecimento, int qtdFuncionarios){
+        this.nome_estabelecimento = nome_estabelecimento;
+        this.tipo_estabelecimento = tipo_estabelecimento;
+        this.qtdFuncionarios = qtdFuncionarios;
+        this.qtdPedidosDoDIA = 0;
+    }
+   
+    public void entradaPedido(){
+        this.qtdPedidosDoDIA++;
+    }
+    
+    public String mostrar(){
+        return "Nome do estabelecimento: "+nome_estabelecimento+"\nTipo do"
+                + " estabelecimento: "+tipo_estabelecimento+"\nQuantidade de"
+                + " funcionários: "+qtdFuncionarios+"\nQuantidade de pedidos do"
+                + " dia: "+qtdPedidosDoDIA;
+    }
+     public static void  main(String[] args){
+        Estabelecimento estabelecimento1 = new Estabelecimento("MC Donalds", 
+                "Lanchonete", 50);
+       
+        estabelecimento1.entradaPedido();
+        estabelecimento1.entradaPedido();
+        
+        Estabelecimento estabelecimento2 = new Estabelecimento("Bike Norte",
+        "Venda de bicicletas e acessórios de ciclismo", 20);
+        
+        estabelecimento2.entradaPedido();
+        
+        Estabelecimento estabelecimento3 = new Estabelecimento("TecnoMaster",
+        "Venda de objetos tecnológicos etc.", 10);
+        
+        estabelecimento3.entradaPedido();
+        
+        System.out.println(estabelecimento1.mostrar());
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-==-");
+        System.out.println(estabelecimento2.mostrar());
+        System.out.println("-=-=-=-=-=-==-=-=-=-=-=-=-=-");
+        System.out.println(estabelecimento3.mostrar());
+    }  
+}

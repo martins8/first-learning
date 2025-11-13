@@ -1,0 +1,20 @@
+import java.util.Scanner;
+/**
+ *Crie uma situação em que ocorra uma exceção dentro de um código. Utilize 
+ * try/catch para realizar a captura e tratamento dessa exceção. 
+ * @author Arthur Martins
+ */
+public class TratamentoDeExcecoes {
+    public static void main(String[] args){
+        try {
+            System.out.println("Digite um número inteiro qualquer: ");
+            Scanner s = new Scanner(System.in);
+            int entrada = s.nextInt();
+            System.out.println("Número inteiro digitado: "+entrada);
+            
+        }catch (Exception excecao){
+            System.out.println("ERRO!! Digite um número inteiro!!!");
+        }
+        
+    }
+}

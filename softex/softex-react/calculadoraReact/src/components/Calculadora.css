@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(182, 215, 243);
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin: 200px;
+}
+
+.container input {
+
+    height: 50px;
+    width: 20%;
+    padding: 20px;
+}
+
+.operadores {
+    margin: 20px;
+}
+.operadores button{
+    height: 50px;
+    width: 50px;
+    padding: 10%;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.operadores button:hover{
+    filter: brightness(0.9);
+}
+

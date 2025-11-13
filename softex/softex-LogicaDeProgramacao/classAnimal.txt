@@ -1,0 +1,70 @@
+public class Animal {
+    /**
+     * ATRIBUTOS
+     */
+    
+    private String nome_cientifico;
+    private String nome_popular;
+    private double pesoMedio;
+    
+   /* METODO CONSTRUTOR 
+    */
+    
+    public Animal(String nome_cientifico, String nome_popular, double pesoMedio){
+        
+        if (pesoMedio < 1000){
+            System.out.println("O sistema possui preferência no cadastro de "
+                    + "animais que pesam a partir de 1 tonelada");
+        } else{
+            this.nome_cientifico = nome_cientifico;
+            this.nome_popular = nome_popular;
+            this.pesoMedio = pesoMedio;
+        }
+    }
+    
+    /* METODOS GERAIS DA CLASSE*/
+    
+    public void setNomeCientifico(String nome_cientifico){
+        this.nome_cientifico = nome_cientifico;
+    }
+    
+    public String getNomeCientifico(){
+        return "Nome científico: " + this.nome_cientifico+"\n";
+    }
+    
+    public void setNomePopular(String nome_popular){
+        this.nome_popular = nome_popular;
+    }
+    
+    public String getNomePopular(){
+        return "Nome popular: " + this.nome_popular+"\n";
+    }
+    
+    public void setPesoMedio(double pesoMedio){
+        this.pesoMedio = pesoMedio;
+    }
+    
+    public String getPesoMedio(){
+        return "Peso Médio: " + this.pesoMedio+" KG\n";
+    }
+    
+    /*   METODO MAIN  */
+    public static void main(String [] args){
+        Animal animal_1 = new Animal("Orcinus orca", "Orca",
+        3000);
+        
+        Animal animal_2 = new Animal("Elephantidae", "Elefante", 4000);
+        
+        Animal animal_3 = new Animal ("Balaenoptera musculus", "Baleia Azul",
+                130000);
+        
+        System.out.println(animal_1.getNomeCientifico() + 
+                animal_1.getNomePopular() + animal_1.getPesoMedio());
+        
+        System.out.println(animal_2.getNomeCientifico() + 
+                animal_2.getNomePopular() + animal_2.getPesoMedio());
+        
+        System.out.println(animal_3.getNomeCientifico() + 
+                animal_3.getNomePopular() + animal_3.getPesoMedio());
+    }
+}

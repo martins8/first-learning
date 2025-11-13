@@ -1,0 +1,51 @@
+/**
+ *
+ * ATIVIDADE: Crie dois pacotes baseados nas atribuições de uma 
+ * empresa e inclua classes 
+ * neles. Lembre-se de trabalhar com os padrões Java.
+ */
+
+package pacotes.empresa.funcionarios;
+public class Funcionario {
+    private String nome;
+    private String cpf;
+    private int idade;
+    private double salario;
+    
+    public Funcionario(String nome, String cpf, int idade, double salario){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.idade = idade;
+        this.salario = salario;
+    }
+    
+    public String getNome() {
+        return "Nome: "+ this.nome;
+    }
+    
+    public void setNome(String nome){
+        this.nome = nome;
+    }  
+}
+
+
+package pacotes.empresa.produtos;
+
+public class Produto {
+    private String nomeProduto;
+    private int qtdEstoque;
+    
+    public Produto(String nomeProduto, int qtdEstoque){
+        this.nomeProduto = nomeProduto;
+        this.qtdEstoque = qtdEstoque;
+    }
+    
+    public void setNomeProduto(String nomeProduto){
+        this.nomeProduto = nomeProduto;
+    }
+    
+    public String getQtdEstoque(){
+        return "Quantidade em estoque: "+ this.qtdEstoque;
+    }
+    
+}
